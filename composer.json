@@ -1,0 +1,21 @@
+{
+    "name": "sulaymankhan/analytics",
+    "description": "Include Google Analytics in your Laravel App",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Sulayman",
+            "email": "sulayman.mohmand@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "sulaymankhan\\analytics\\LaravelGoogleAnalyticsProvider"
+            ]
+        }
+    },
+    "require": {
+        "spatie/laravel-analytics": "^3.6"
+    }
+}
