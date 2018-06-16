@@ -17,5 +17,10 @@
     },
     "require": {
         "spatie/laravel-analytics": "^3.6"
+    },
+    "autoload": {
+    "psr-4": {
+      "sulaymankhan\\analytics\\": "src"
     }
+  },
 }

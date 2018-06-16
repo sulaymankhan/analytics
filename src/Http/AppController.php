@@ -3,7 +3,7 @@ namespace sulaymankhan\analytics\Http;
 
 use Illuminate\Routing\Controller as BaseController;
 use Analytics;
-
+use Spatie\Analytics\Period;
 
 
 

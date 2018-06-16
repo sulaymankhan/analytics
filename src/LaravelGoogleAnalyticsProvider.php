@@ -13,6 +13,9 @@ class LaravelGoogleAnalyticsProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/config/app.php' => config_path('app.php'),
+        ]);
         $this->app->register(\Spatie\Analytics\AnalyticsServiceProvider::class);
         $loader = AliasLoader::getInstance();
         $loader->alias('Analytics', '\Spatie\Analytics\AnalyticsFacade');
@@ -27,7 +30,7 @@ class LaravelGoogleAnalyticsProvider extends ServiceProvider
      */
     public function register()
     {
- 
+        $this->mergeConfigFrom(__DIR__.'/config/app.php', 'analytics');
   
     }
 }
