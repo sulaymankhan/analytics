@@ -15,6 +15,13 @@ composer require sulaymankhan/analytics:"dev-master"
 
 php artisan vendor:publish --provider="sulaymankhan\analytics\LaravelGoogleAnalyticsProvider"
 
+
+// config/app.php
+
+"providers"=>[
+ 	sulaymankhan\analytics\LaravelGoogleAnalyticsProvider::class,
+ ]
+
 ### More information coming soon
 
 
