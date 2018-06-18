@@ -2,17 +2,31 @@
 namespace sulaymankhan\analytics\Http;
 
 use Illuminate\Routing\Controller as BaseController;
-use Analytics;
-use Spatie\Analytics\Period;
+use sulaymankhan\analytics\Report;
 
 
+use \Spatie\Analytics\Period;
 
 class AppController extends BaseController
 {
     public function dashboard()
     {
-        //fetch the most visited pages for today and the past week
-			$result=Analytics::fetchMostVisitedPages(Period::days(7));
-			dd($result);
+        $totalPageViews		=	Report::fetchTotalVisitorsAndPageViews(Period::days(7));
+		$topViews			=	Report::fetchMostVisitedPages(Period::days(7),10);
+		$productAddsToCart	=	Report::productAddsToCart(Period::days(7),10);
+		$topProductViews		=	Report::topProductViews(Period::days(7),50);
+		
+		$totalPageViews=$totalPageViews->map(function($v){
+			$v['date']= $v['date']->format('Y-m-d');
+			return $v;
+		});
+
+		
+    	return view('analytics::dashboard',[
+    		'topViews'=>$topViews,
+    		'topProductViews'=>$topProductViews,
+    		'productAddsToCart'=>$productAddsToCart,
+    		'chart1Data'=>$totalPageViews
+    	]);
     }
 }
