@@ -21,6 +21,7 @@ php artisan vendor:publish --provider="sulaymankhan\analytics\LaravelGoogleAnaly
 
 * Mohammad Sulayman
 
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
