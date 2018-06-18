@@ -6,10 +6,6 @@ This package enables you to easily add a Google Analytics Dashboard in your Lara
 
 In order to use this package you need to create Google Analytics Credentials. Follow the instructions on https://github.com/spatie/laravel-analytics
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
 
 ### Installing
 
@@ -24,8 +20,6 @@ php artisan vendor:publish --provider="sulaymankhan\analytics\LaravelGoogleAnaly
 ## Authors
 
 * Mohammad Sulayman
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
