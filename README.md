@@ -10,7 +10,8 @@ In order to use this package you need to create Google Analytics Credentials. Fo
 ### Installing
 
 You can install this page using Composer.
-composer require sulaymankhan/analytics
+
+composer require sulaymankhan/analytics:"dev-master"
 
 php artisan vendor:publish --provider="sulaymankhan\analytics\LaravelGoogleAnalyticsProvider"
 
