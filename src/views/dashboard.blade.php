@@ -1,7 +1,14 @@
 @extends(env('ANALYTICS_LAYOUT'))
 
 @section('content')
-
+<style>
+.hideOverFlow{
+	max-width: 300px;
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
 	<div class="container">
 		<div class="row">
 			<h3>
@@ -26,7 +33,7 @@
 							@foreach($topViews as $t)
 							
 							<tr>
-								<td>{{$t['url']}}</td>
+								<td class="hideOverFlow">{{$t['url']}}</td>
 								<td>{{$t['pageViews']}}</td>
 							</tr>
 							@endforeach
@@ -48,7 +55,7 @@
 							@foreach($productAddsToCart as $t)
 							
 							<tr>
-								<td>{{$t['pageTitle']}}</td>
+								<td class="hideOverFlow">{{$t['pageTitle']}}</td>
 								<td>{{$t['visitors']}}</td>
 							</tr>
 							@endforeach
@@ -70,7 +77,7 @@
 							@foreach($topProductViews as $t)
 							
 							<tr>
-								<td>{{$t['pageTitle']}}</td>
+								<td class="hideOverFlow">{{$t['pageTitle']}}</td>
 								<td>{{$t['visitors']}}</td>
 							</tr>
 							@endforeach
