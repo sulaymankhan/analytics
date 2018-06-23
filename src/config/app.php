@@ -7,5 +7,6 @@ return [
 	'aliases'=>[
 		 'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
 	],
-	
+	//Your layout name
+	'layout'=>env('ANALYTICS_LAYOUT','layouts.app')	
 ];

@@ -1,14 +1,14 @@
 @extends(env('ANALYTICS_LAYOUT'))
-
-@section('content')
 <style>
 .hideOverFlow{
 	max-width: 300px;
 	white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 }
 </style>
+@section('content')
+
 	<div class="container">
 		<div class="row">
 			<h3>
